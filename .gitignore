@@ -18,3 +18,13 @@
 /ECommerce/.vs/ECommerce/v16
 /ECommerce/.vs/ECommerce/DesignTimeBuild
 /ECommerce/.vs/ECommerce/config
+/ECommerce/ECommerce.DAL/bin/Debug/net5.0
+/ECommerce/ECommerce.DAL/obj
+/ECommerce/ECommerce.DTOs/bin/Debug/net5.0
+/ECommerce/ECommerce.DTOs/obj
+/ECommerce/ECommerce.Infrastructure/obj
+/ECommerce/ECommerce.Infrastructure/bin/Debug/net5.0
+/ECommerce/ECommerce.Repositories/obj
+/ECommerce/ECommerce.Repositories/bin/Debug/net5.0
+/ECommerce/ECommerce.Services/obj
+/ECommerce/ECommerce.Services/bin/Debug/net5.0

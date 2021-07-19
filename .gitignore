@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ECommerce/ECommerce.DAL/obj/Release/net5.0
+/ECommerce/ECommerce.DAL/obj/Debug/net5.0
+/ECommerce/ECommerce.DTOs/obj/Release/net5.0
+/ECommerce/ECommerce.DTOs/obj/Debug/net5.0
+/ECommerce/ECommerce.Infrastructure/obj/Release/net5.0
+/ECommerce/ECommerce.Infrastructure/obj/Debug/net5.0
+/ECommerce/ECommerce.Repositories/obj/Release/net5.0
+/ECommerce/ECommerce.Repositories/obj/Debug/net5.0
+/ECommerce/ECommerce.Services/obj/Release/net5.0
+/ECommerce/ECommerce.Services/obj/Debug/net5.0
+/ECommerce/ECommerceWebAPI/obj
+/ECommerce/ECommerceWebAPI/bin/Debug/net5.0
+/ECommerce/.vs/ECommerce/v16
+/ECommerce/.vs/ECommerce/DesignTimeBuild
+/ECommerce/.vs/ECommerce/config

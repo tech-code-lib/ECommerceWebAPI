@@ -15,6 +15,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ECommerce.DAL\ECommerce.DAL.csproj" />
+    <ProjectReference Include="..\ECommerce.DTOs\ECommerce.DTOs.csproj" />
+    <ProjectReference Include="..\ECommerce.Infrastructure\ECommerce.Infrastructure.csproj" />
+    <ProjectReference Include="..\ECommerce.Repositories\ECommerce.Repositories.csproj" />
+    <ProjectReference Include="..\ECommerce.Services\ECommerce.Services.csproj" />
   </ItemGroup>
 
 </Project>

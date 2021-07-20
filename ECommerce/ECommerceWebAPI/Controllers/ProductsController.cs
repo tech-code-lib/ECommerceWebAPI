@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ECommerce.Services.Contract;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,15 +12,16 @@ namespace ECommerceWebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        public ProductsController()
+        private readonly IProductService _productService;
+        public ProductsController(IProductService productService)
         {
-
+            _productService = productService;
         }
 
         [HttpGet]
         public IActionResult GetAllProducts()
         {
-            return Ok();
+            return Ok(_productService.GetProducts());
         }
     }
 }

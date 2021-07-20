@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ECommerce.DAL.Tables
 {
-    public class Product : IBaseTable
+    public class Product : BaseEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

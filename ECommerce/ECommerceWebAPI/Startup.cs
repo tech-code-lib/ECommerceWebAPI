@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ECommerceWebAPI.Extensions;
+using ECommerce.Services.Contract;
+using ECommerce.Services;
 
 namespace ECommerceWebAPI
 {
@@ -39,6 +41,9 @@ namespace ECommerceWebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ECommerceWebAPI", Version = "v1" });
             });
+            services.AddAutoMapper(typeof(ECommerce.Services.AutoMapperProfile).Assembly);
+            services.AddScoped<IProductService, ProductService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

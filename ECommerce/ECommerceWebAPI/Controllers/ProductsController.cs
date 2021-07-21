@@ -19,9 +19,10 @@ namespace ECommerceWebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllProducts()
+        public async Task<IActionResult> GetAllProducts()
         {
-            return Ok(_productService.GetProducts());
+            var products = await _productService.GetProducts();
+            return Ok(products);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace ECommerceWebAPI.Controllers
             return Ok();
         }
 
-        [Route("api/[controller]/{categoryId: int}/products")]
+        [Route("api/[controller]/{categoryId}/products")]
         [HttpGet]
         public IActionResult GetProductsByCategory(int categoryId)
         {

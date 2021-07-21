@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using ECommerceWebAPI.Extensions;
 using ECommerce.Services.Contract;
 using ECommerce.Services;
+using ECommerce.Repositories;
 
 namespace ECommerceWebAPI
 {
@@ -42,6 +43,7 @@ namespace ECommerceWebAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ECommerceWebAPI", Version = "v1" });
             });
             services.AddAutoMapper(typeof(ECommerce.Services.AutoMapperProfile).Assembly);
+            services.AddScoped<ECommUoW>();
             services.AddScoped<IProductService, ProductService>();
 
         }

@@ -2,6 +2,7 @@
 using ECommerce.DAL.Tables;
 using ECommerce.Repositories.Contract;
 using System;
+using System.Threading.Tasks;
 
 namespace ECommerce.Repositories
 {
@@ -32,6 +33,19 @@ namespace ECommerce.Repositories
         ~ECommUoW()
         {
             Disposing(false);
+        }
+
+        public async Task<int> SaveAsync()
+        {
+            try
+            {
+                return await _dbContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
         protected virtual void Disposing(bool disposing)

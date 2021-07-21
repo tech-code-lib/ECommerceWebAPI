@@ -21,6 +21,22 @@ namespace ECommerce.Services
             _uow = uow;
             _mapper = mapper;
         }
+
+        public async Task<int> AddProduct(ProductDTO product)
+        {
+            var repo = _uow.ProductRepository;
+            var productToAdd = _mapper.Map<ProductDTO, Product>(product);
+            repo.Add(productToAdd);
+            await _uow.SaveAsync();
+            return productToAdd.Id;
+        }
+
+        public async Task<ProductDTO> GetProduct(int id)
+        {
+            var product = await _uow.ProductRepository.GetByIDAsync(id);
+            return _mapper.Map<Product, ProductDTO>(product);
+        }
+
         public async Task<IEnumerable<ProductDTO>> GetProducts()
         {
             var products = await _uow.ProductRepository.GetAllAsync();

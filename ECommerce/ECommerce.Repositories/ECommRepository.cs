@@ -24,7 +24,7 @@ namespace ECommerce.Repositories
 
         public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            this._dbSet.Add(entity);
         }
 
         public void Delete(TEntity entity)

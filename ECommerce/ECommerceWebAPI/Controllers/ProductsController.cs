@@ -1,4 +1,5 @@
-﻿using ECommerce.Services.Contract;
+﻿using ECommerce.DTOs;
+using ECommerce.Services.Contract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -23,6 +24,20 @@ namespace ECommerceWebAPI.Controllers
         {
             var products = await _productService.GetProducts();
             return Ok(products);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProduct(int id)
+        {
+            var products = await _productService.GetProduct(id);
+            return Ok(products);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddAProduct([FromBody]ProductDTO product)
+        {
+            var addedProductId = await _productService.AddProduct(product);
+            return CreatedAtAction("GetProduct", new { id = addedProductId });
         }
     }
 }
